@@ -26,14 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvScreenName"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         android:text="This is my Twitter Account" />
 
     <ImageView
         android:id="@+id/ivMediaImage"
         android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/tvBody"
         android:layout_alignParentStart="true"
         android:layout_marginStart="65dp"
@@ -41,6 +41,16 @@
         android:scaleType="fitXY"
         android:visibility="gone"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/createdAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="2dp"
+        android:text="TextView" />
 
 
 </RelativeLayout>
