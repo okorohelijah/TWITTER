@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvScreenName"
         android:layout_marginStart="5dp"
+        android:autoLink="all"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         android:text="This is my Twitter Account" />
