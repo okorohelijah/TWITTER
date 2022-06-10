@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComposeActivity">
+    tools:context=".ComposeActivity"
+    android:background="@color/dark_mode"
+    android:textColor="@color/text_color">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til"
@@ -22,9 +24,11 @@
             android:layout_marginTop="5dp"
             android:ems="10"
             android:gravity="start|top"
+            android:textColorHint="@color/text_color"
             android:hint="What's happening?"
             android:inputType="textMultiLine"
-            android:minLines="5" />
+            android:minLines="5"
+            android:textColor="@color/text_color" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnTweet"
@@ -34,6 +38,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:text="TWEET" />
+        android:text="TWEET"
+        android:background="@color/twitter_blue"/>
 
 </RelativeLayout>
