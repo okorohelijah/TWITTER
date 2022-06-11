@@ -36,14 +36,11 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Tweet tweet = tweets.get(position);
-
         holder.bind(tweet);
-
     }
 
     @Override
     public int getItemCount() {return tweets.size();}
-
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView ivProfileImage;
@@ -52,7 +49,6 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
         ImageView ivMediaImage;
         TextView createdAt;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
@@ -60,8 +56,6 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             ivMediaImage = itemView.findViewById(R.id.ivMediaImage);
             createdAt = itemView.findViewById(R.id.createdAt);
-
-
         }
 
         public void bind(Tweet tweet) {
@@ -70,8 +64,6 @@ public class TweetsAdapter extends  RecyclerView.Adapter<TweetsAdapter.ViewHolde
             tvScreenName.setText(tweet.user.screenName);
             Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
 
-            System.out.println(ivMediaImage);
-            System.out.println(tweet.imageUrl);
             if (!tweet.imageUrl.equals("")){
                 ivMediaImage.setVisibility(View.VISIBLE);
                 Glide.with(context).load(tweet.imageUrl).into(ivMediaImage);

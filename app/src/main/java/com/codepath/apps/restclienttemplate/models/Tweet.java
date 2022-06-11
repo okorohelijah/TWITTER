@@ -29,7 +29,6 @@ public class Tweet {
         tweet.body = jsonObject.getString("text");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
-        //beginning
 
         if (!jsonObject.isNull("extended_entities")){
             JSONObject extendedEntities = jsonObject.getJSONObject("extended_entities");
@@ -37,12 +36,7 @@ public class Tweet {
             JSONObject mediaObject = media.getJSONObject(0);
             tweet.imageUrl = mediaObject.getString("media_url_https");
         }
-
-        //end
-
         return tweet;
-
-
 
     }
     public static List<Tweet> fromJsonArray(JSONArray jsonArray) throws JSONException {
